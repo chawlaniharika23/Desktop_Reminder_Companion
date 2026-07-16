@@ -1,14 +1,11 @@
 import idle1 from "../../assets/mascot/idle/idle1.png";
+import "./Mascot.css";
 
 function Mascot() {
   return (
-    <img
-      src={idle1}
-      alt="Mascot"
-      style={{
-        width: "180px",
-      }}
-    />
+    <div className="mascot">
+      <img src={idle1} alt="Desktop Companion" />
+    </div>
   );
 }
 

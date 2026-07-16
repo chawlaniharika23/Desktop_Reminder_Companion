@@ -1,3 +1,4 @@
+import "./App.css";
 import Mascot from "./components/Mascot/Mascot";
 
 function App() {

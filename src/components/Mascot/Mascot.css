@@ -1,0 +1,9 @@
+.mascot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mascot img {
+    width: 180px;
+  }
