@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function SpriteAnimator({ frames, frameDuration = 10, width = 180 }) {
+function SpriteAnimator({ frames, frameDuration = 200, width = 180 }) {
   const [currentFrame, setCurrentFrame] = useState(0);
 
   useEffect(() => {
