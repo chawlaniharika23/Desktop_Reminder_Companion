@@ -21,7 +21,7 @@ A cute desktop mascot built with Electron and React.
 ## Progress
 
 - [x] Project setup
-- [ ] Idle animation
+- [x] Idle animation
 - [ ] Walking animation
 - [ ] Speech bubble
 - [ ] Reminder system
