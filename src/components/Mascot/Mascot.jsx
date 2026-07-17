@@ -1,8 +1,12 @@
+import "./Mascot.css";
+
 import SpriteAnimator from "./SpriteAnimator";
 import useAnimation from "../../hooks/useAnimation";
+import useMascotState from "../../hooks/useMascotState";
 
 function Mascot() {
-  const animation = useAnimation("idle");
+  const state = useMascotState();
+  const animation = useAnimation(state);
 
   return (
     <div className="mascot">

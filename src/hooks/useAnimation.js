@@ -1,5 +1,7 @@
 import { animations } from "../utils/animations";
 
-export default function useAnimation(state) {
+function useAnimation(state) {
   return animations[state];
 }
+
+export default useAnimation;
