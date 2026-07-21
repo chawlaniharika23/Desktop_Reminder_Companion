@@ -1,0 +1,19 @@
+.speech-bubble{
+    position:absolute;
+    bottom:180px;
+    left:60px;
+
+    max-width:220px;
+
+    background:white;
+    padding:12px 16px;
+
+    border-radius:18px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.2);
+
+    font-size:15px;
+    font-family:sans-serif;
+
+    user-select:none;
+}
