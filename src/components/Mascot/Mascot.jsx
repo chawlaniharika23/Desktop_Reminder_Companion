@@ -6,11 +6,9 @@ import useMascotState from "../../hooks/useMascotState";
 import useMovement from "../../hooks/useMovement";
 
 function Mascot() {
-  const state = useMascotState();
+  const { state, setState } = useMascotState();
   const animation = useAnimation(state);
-  console.log(animation);
-  console.log(animation.frames);
-  const x = useMovement(state);
+  const x = useMovement(state, setState);
 
   return (
     <div

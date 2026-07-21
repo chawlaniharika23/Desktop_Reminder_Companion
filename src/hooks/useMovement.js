@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function useMovement(state) {
+function useMovement(state, setState) {
   const START_X = window.innerWidth;
   const TARGET_X = 900;
   const SPEED = 2;
@@ -13,6 +13,7 @@ function useMovement(state) {
     const interval = setInterval(() => {
       setX((prev) => {
         if (prev <= TARGET_X) {
+          setState("idle");
           return TARGET_X;
         }
 
@@ -21,7 +22,7 @@ function useMovement(state) {
     }, 16);
 
     return () => clearInterval(interval);
-  }, [state]);
+  }, [state, setState]);
 
   return x;
 }

@@ -1,17 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function useMascotState() {
-  const [state, setState] = useState("idle");
+  const [state, setState] = useState("walk");
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setState((prev) => (prev === "idle" ? "walk" : "idle"));
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  return state;
+  return {
+    state,
+    setState,
+  };
 }
 
 export default useMascotState;
