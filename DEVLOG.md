@@ -77,7 +77,64 @@ Build a reusable animation system for the desktop mascot.
 - Introduce target positions and movement speed.
 - Prepare for reminder interactions.
 
-### Current Status
-Animation engine complete.
-State management started.
-Movement system in progress.
+## Day 3
+
+### Goal
+Implement mascot movement and begin building interactive behaviors.
+
+### Completed
+- Built the initial movement system using a custom `useMovement` hook.
+- Made the mascot move from right to left across the screen.
+- Refactored the mascot to use movement, animation, and state hooks together.
+- Replaced the temporary timed movement with destination-based movement.
+- Created the foundation for a behavior-driven state system.
+- Added a reminder message database (`messages.js`).
+- Designed the speech bubble component structure.
+- Started integrating the reminder system using a custom `useReminder` hook.
+- Debugged React errors related to animation state and sprite rendering.
+
+### Challenges Faced
+- Resolved `animation is not defined` errors.
+- Fixed issues caused by incorrect state flow between components.
+- Learned how different systems communicate using shared state instead of directly interacting.
+- Investigated image rendering issues caused by runtime errors.
+
+### What I Learned
+- Creating reusable movement logic with custom hooks.
+- Passing data between independent systems using React state.
+- Building scalable project architecture by separating:
+  - Animation System
+  - Movement System
+  - State System
+  - Reminder System
+- Debugging React runtime errors using the browser console.
+
+### Current Project Structure
+
+src/
+├── assets/
+│   └── mascot/
+│       ├── idle/
+│       └── walk/
+├── components/
+│   └── Mascot/
+│       ├── Mascot.jsx
+│       ├── SpriteAnimator.jsx
+│       ├── SpeechBubble.jsx
+│       ├── SpeechBubble.css
+│       └── Mascot.css
+├── hooks/
+│   ├── useAnimation.js
+│   ├── useMascotState.js
+│   ├── useMovement.js
+│   └── useReminder.js
+├── data/
+│   ├── animations.js
+│   └── messages.js
+
+### Next Steps
+- Complete the speech bubble system.
+- Hide the speech bubble automatically after a few seconds.
+- Make the mascot walk off-screen after delivering a reminder.
+- Introduce a finite state machine (FSM) to manage mascot behavior.
+- Prepare for Electron integration.
