@@ -4,6 +4,10 @@ function SpriteAnimator({ frames, frameDuration = 200, width = 180 }) {
   const [currentFrame, setCurrentFrame] = useState(0);
 
   useEffect(() => {
+    if (!frames || frames.length === 0) return;
+
+    setCurrentFrame(0);
+
     const interval = setInterval(() => {
       setCurrentFrame((prev) => (prev + 1) % frames.length);
     }, frameDuration);

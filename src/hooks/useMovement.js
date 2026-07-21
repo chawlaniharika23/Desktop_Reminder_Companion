@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 
 function useMovement(state) {
-  const [x, setX] = useState(-200);
+  const [x, setX] = useState(window.innerWidth);
 
   useEffect(() => {
     if (state !== "walk") return;
 
     const interval = setInterval(() => {
-      setX((prev) => prev + 2);
+      setX((prev) => prev - 2);
     }, 16);
 
     return () => clearInterval(interval);
